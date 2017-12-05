@@ -1,0 +1,135 @@
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<title>Tic Tac Toe</title>
+
+<link rel="icon" type="image/png" href="images/favicon2.png">
+<link rel="stylesheet" href="other.css">
+<link rel="stylesheet" href="TicTacToecss.css">
+</head>
+
+<body>
+
+<div id="container">
+	<div id="content_center" style="text-align:center">
+
+		<h1 style="text-align: center;font-size:30px;margin:10px 0px">Tic Tac Toe</h1>
+
+		<div id="bdyContentGame">
+
+			<div id="bdyContentGameTic" class="containerTicTacToe">
+				<div id="bdyContentGameTicTop">
+					<div id="bdyContentGameTicTopLeft">
+					<div class="containerTicTacToe" id="bdyContentGameTicTopCont">
+						<button id="bdyContentGameTicTopLeftButton1" onmouseover="mouseOverButton(this);mouseOverExit()"
+						 onmouseout="mouseOutButton(this);mouseOutExit()"
+						onclick="changeTicToMenu()">Menu</button>
+					</div>
+					</div>
+
+					<div style="float:left;height:50px;width:2px;background-color:black"></div>
+
+					<div id="bdyContentGameTicTopRight">
+					<div id="bdyContentGameTicTopCont">
+						<div id="bdyContentGameTicTopRightMessage"></div>
+						<div id="bdyContentGameTicTopRightMessageExit">You can't exit when an animation is playing!</div>
+					</div>
+					</div>
+				</div>
+
+				<div id="bdyContentGameTicCont"></div>
+			</div>
+			
+			<div id="bdyContentGameMenu">
+				<div id="bdyContentGameMenuDiv">
+				<div class="containerTicTacToe contCell">
+					<div id="bdyContentGameMenuDivMenu">
+						
+						<div id="bdyContentGameMenuDivMenuText">
+							Menu
+						</div>
+
+						<div id="bdyContentGameMenuDivMenuButtons">
+					
+						<button id="bdyContentGameMenuDivMenuButton1" class="bdyContentGameMenuDivMenuButton" 
+						onmouseover="mouseOverButton(this)" onmouseout="mouseOutButton(this)"
+						onclick="changeMenuToTic()">
+							Start Game
+						</button>
+						<br>
+						<button id="bdyContentGameMenuDivMenuButton2" class="bdyContentGameMenuDivMenuButton"
+						onmouseover="mouseOverButton(this)" onmouseout="mouseOutButton(this)"
+						onclick="changeMenuToStats()">
+							Options & Stats
+						</button>
+
+						</div>
+						
+					</div>
+				</div>
+				</div>
+			</div>
+
+			<div id="bdyContentGameStats">
+			<div class="containerTicTacToe contTable">
+			<div class="containerTicTacToe contCell">
+					
+				<div class="contCont" id="bdyContentGameStatsMenu">
+					<div id="bdyContentGameStatsMenuLeft">
+						<div class="bdyContentGameStatsMenuText">Options</div>
+
+						<div id="bdyContentGameStatsMenuLeftBox">
+							<div id="bdyContentGameStatsMenuLeftOp">Difficulty</div>
+							<div id="bdyContentGameStatsMenuLeftCont">
+								<button class="bdyContentGameStatsMenuButton"
+								onclick="changeDifficulty('easy')"><span class="bdyContentGameStatsMenuButtonSpan">Easy</span></button>
+								<button class="bdyContentGameStatsMenuButton"
+								onclick="changeDifficulty('hard')"><span class="bdyContentGameStatsMenuButtonSpan">Hard</span></button>
+							</div>
+
+							<div id="bdyContentGameStatsMenuLeftOp">Role</div>
+							<div id="bdyContentGameStatsMenuLeftCont">
+								<button class="bdyContentGameStatsMenuButton"
+								onclick="changeRole('x')" onmouseover="mouseOverRole(this)" onmouseout="mouseOutRole(this)">
+								<span class="bdyContentGameStatsMenuButtonSpan">Crosses</span></button>
+								<button class="bdyContentGameStatsMenuButton"
+								onclick="changeRole('0')" onmouseover="mouseOverRole(this)" onmouseout="mouseOutRole(this)">
+								<span class="bdyContentGameStatsMenuButtonSpan">Noughts</span></button>
+							</div>
+
+							<div id="bdyContentGameStatsMenuLeftBot">Crosses have the first round</div>
+						</div>
+					</div>
+
+					<div id="bdyContentGameStatsMenuRight">
+						<div class="bdyContentGameStatsMenuText">Stats this session</div>
+
+						<div id="bdyContentGameStatsMenuRightBox">
+							<div class="bdyContentGameStatsMenuRightBoxData">Games: 0</div>
+							<div class="bdyContentGameStatsMenuRightBoxData">Wins: 0</div>
+							<div class="bdyContentGameStatsMenuRightBoxData">Draws: 0</div>
+							<div class="bdyContentGameStatsMenuRightBoxData">Losses: 0</div>
+							<div class="bdyContentGameStatsMenuRightBoxData">Winrate: 0</div>
+						</div>
+					</div>
+
+					<div id="bdyContentGameStatsMenuBot">
+						<button id="bdyContentGameStatsMenuBotButton" 
+						onmouseover="mouseOverButton(this)" onmouseout="mouseOutButton(this)"
+						onclick="changeStatsToMenu()">Return to Menu</button>
+					</div>
+				</div>
+
+			</div>
+			</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script src="TicTacToe.js"></script>
+</body>
+</html>
